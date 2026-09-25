@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+        content="Jouri — premium handmade clothing store.">
+
+  <title>Jouri | Your Store</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="site-header">
+
+  <a class="logo" href="#" aria-label="Jouri home">
+    J
+  </a>
+
+  <nav>
+    <a href="#shop">Shop</a>
+    <a href="#order">Order</a>
+    <a href="#beach">Beach Collection</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <button
+    id="themeToggle"
+    class="icon-btn"
+    type="button"
+    aria-label="Toggle theme">
+    ◐
+  </button>
+
+</header>
+
+
+<main>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <p class="eyebrow">
+        JOURI • HANDMADE CLOTHING
+      </p>
+
+      <h1>
+        Welcome to your store
+      </h1>
+
+      <p>
+        Discover pieces made with your style in mind —
+        classic, casual, or trendy.
+      </p>
+
+      <a class="gold-btn" href="#shop">
+        Welcome to your store
+      </a>
+
+    </div>
+
+
+    <div class="gold-grid" aria-hidden="true">
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- SHOP -->
+
+  <section class="section" id="shop">
+
+    <div class="section-head">
+
+      <div>
+
+        <p class="eyebrow">
+          COLLECTION
+        </p>
+
+        <h2>
+          Find your piece
+        </h2>
+
+      </div>
+
+
+      <label class="search-box">
+
+        <span>⌕</span>
+
+        <input
+          id="searchInput"
+          type="search"
+          placeholder="Search clothes..."
+          autocomplete="off">
+
+      </label>
+
+    </div>
+
+
+    <div
+      id="products"
+      class="product-grid"
+      aria-live="polite">
+    </div>
+
+  </section>
+
+
+
+  <!-- ORDER -->
+
+  <section class="section split" id="order">
+
+    <div>
+
+      <p class="eyebrow">
+        PERSONAL SHOPPING
+      </p>
+
+      <h2>
+        Place an order
+      </h2>
+
+      <p>
+        Enter your details and choose a style.
+      </p>
+
+
+      <form
+        id="orderForm"
+        class="order-form"
+        novalidate>
+
+
+        <label>
+          Full name
+
+          <input
+            name="name"
+            required
+            maxlength="80"
+            autocomplete="name">
+        </label>
+
+
+        <label>
+          Address
+
+          <input
+            name="address"
+            required
+            maxlength="180"
+            autocomplete="street-address">
+        </label>
+
+
+        <label>
+          Phone number
+
+          <input
+            name="phone"
+            required
+            maxlength="20"
+            inputmode="tel"
+            autocomplete="tel">
+        </label>
+
+
+        <label>
+          Number of items
+
+          <input
+            name="quantity"
+            type="number"
+            min="1"
+            max="20"
+            value="1"
+            required>
+        </label>
+
+
+        <label>
+          Size
+
+          <select name="size" required>
+
+            <option value="">
+              Choose size
+            </option>
+
+            <option>XS</option>
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+            <option>XL</option>
+            <option>XXL</option>
+
+          </select>
+
+        </label>
+
+
+        <label>
+          Preferred style
+
+          <select
+            name="style"
+            id="styleSelect"
+            required>
+
+            <option value="">
+              Choose style
+            </option>
+
+            <option value="classic">
+              Classic
+            </option>
+
+            <option value="casual">
+              Casual
+            </option>
+
+            <option value="trendy">
+              Trendy
+            </option>
+
+          </select>
+
+        </label>
+
+
+        <label class="full">
+
+          Photo (optional)
+
+          <input
+            id="photoInput"
+            name="photo"
+            type="file"
+            accept="image/jpeg,image/png,image/webp">
+
+          <small>
+            JPG, PNG or WebP — maximum 5 MB.
+          </small>
+
+          <img
+            id="photoPreview"
+            class="photo-preview"
+            alt="Selected photo preview"
+            hidden>
+
+        </label>
+
+
+        <button
+          class="gold-btn full"
+          type="submit">
+
+          Send order request
+
+        </button>
+
+
+        <p
+          id="formMessage"
+          class="form-message"
+          role="status">
+        </p>
+
+      </form>
+
+    </div>
+
+
+
+    <!-- STYLE GUIDE -->
+
+    <aside class="style-card">
+
+      <p class="eyebrow">
+        STYLE GUIDE
+      </p>
+
+      <h3>
+        Find what suits your preference
+      </h3>
+
+      <div
+        id="styleSuggestion"
+        class="suggestion">
+
+        Choose a style in the form
+        to see a suggestion.
+
+      </div>
+
+
+      <div class="privacy-note">
+
+        <strong>
+          Privacy:
+        </strong>
+
+        Customer photos and personal data
+        should be processed on a secure server.
+
+      </div>
+
+    </aside>
+
+  </section>
+
+
+
+  <!-- BEACH -->
+
+  <section class="section beach" id="beach">
+
+    <div class="section-head">
+
+      <div>
+
+        <p class="eyebrow">
+          JOURI SUMMER
+        </p>
+
+        <h2>
+          Beach collection
+        </h2>
+
+      </div>
+
+
+      <label class="upload-btn">
+
+        Add beach photo
+
+        <input
+          id="beachInput"
+          type="file"
+          accept="image/jpeg,image/png,image/webp"
+          multiple
+          hidden>
+
+      </label>
+
+    </div>
+
+
+    <div
+      id="beachGallery"
+      class="beach-gallery">
+
+      <div class="gallery-placeholder">
+
+        Upload your clothing photos here
+        to preview your beach collection.
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- REVIEWS -->
+
+  <section class="section" id="reviews">
+
+    <p class="eyebrow">
+      CUSTOMER VOICES
+    </p>
+
+    <h2>
+      What customers say
+    </h2>
+
+
+    <div class="review-grid">
+
+      <article>
+
+        <p>
+          “Beautiful finish and a very clean look.
+          The piece felt made for me.”
+        </p>
+
+        <strong>
+          — Customer review
+        </strong>
+
+      </article>
+
+
+      <article>
+
+        <p>
+          “The style was simple, comfortable,
+          and easy to wear.”
+        </p>
+
+        <strong>
+          — Customer review
+        </strong>
+
+      </article>
+
+
+      <article>
+
+        <p>
+          “I loved the attention to detail
+          and the packaging.”
+        </p>
+
+        <strong>
+          — Customer review
+        </strong>
+
+      </article>
+
+    </div>
+
+
+    <p class="note">
+
+      Replace these sample testimonials
+      with real customer reviews only,
+      with permission.
+
+    </p>
+
+  </section>
+
+
+
+  <!-- OFFER -->
+
+  <section class="offer">
+
+    <div>
+
+      <p class="eyebrow">
+        SPECIAL OFFER
+      </p>
+
+      <h2>
+        35% discount
+      </h2>
+
+      <p>
+        Special Jouri discount campaign.
+      </p>
+
+    </div>
+
+
+    <a class="gold-btn" href="#shop">
+      Shop now
+    </a>
+
+  </section>
+
+</main>
+
+
+
+<!-- FOOTER -->
+
+<footer id="contact">
+
+  <div>
+
+    <div class="logo footer-logo">
+      J
+    </div>
+
+    <p>
+      Jouri — handmade clothing.
+    </p>
+
+  </div>
+
+
+  <div>
+
+    <p class="eyebrow">
+      CUSTOMER SERVICE
+    </p>
+
+    <a href="tel:01000895672">
+      01000895672
+    </a>
+
+  </div>
+
+
+  <p>
+    © <span id="year"></span>
+    Jouri. All rights reserved.
+  </p>
+
+</footer>
+
+
+<script src="script.js" defer></script>
+
+</body>
+</html>
